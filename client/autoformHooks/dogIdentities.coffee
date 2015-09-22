@@ -5,3 +5,5 @@ dogIdHook = before: insert: (doc) ->
 AutoForm.addHooks 'insertIdentityForm', dogIdHook
 
 AutoForm.addHooks 'insertAppearanceForm', dogIdHook
+
+AutoForm.addHooks 'insertInsuranceForm', dogIdHook

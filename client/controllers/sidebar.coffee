@@ -1,5 +1,5 @@
-Template.sidebar.rendered =->
-	$('.sidebar').sidebar('attach events', '.menu .item').sidebar('show').sidebar('toggle')
+# Template.sidebar.rendered =->
+# 	$('.sidebar').sidebar('attach events', '.menu .item').sidebar('show').sidebar('toggle')
 
 # 	# $('.context.example .ui.sidebar')
 # 	  # .sidebar({

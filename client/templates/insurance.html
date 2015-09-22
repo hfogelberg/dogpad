@@ -1,0 +1,18 @@
+<template name='insurance'>
+	{{#if insurance}}
+		{{#with insurance}}
+			<p>Bolag: {{company}}</p>
+			<p>Produkt: {{product}}</p>
+			<p>Premie: {{price}}</p>
+			<p>Livbelopp: {{life}}</p>
+			<p>Veterinärbelop: {{vet}}</p>
+			<p>From. dat: {{fromDate}}</p>
+			<p>Tom. dat: {{toDate}}</p>
+			<p>Försäkringsnummer: {{insuranceNumber}}</p>
+			<p>Står i namn: {{policyTaker}}</p>
+			<p>Kommentar: {{comment}}</p>
+		{{/with}}
+	{{else}}
+		{{>addInsurance}}
+	{{/if}}
+</template>

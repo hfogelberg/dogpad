@@ -21,3 +21,11 @@ DogAppearances.allow
 		true
 	update: ->
 		true
+
+DogInsurances.allow
+	insert: (doc) ->
+		true
+	remove: ->
+		true
+	update: ->
+		true

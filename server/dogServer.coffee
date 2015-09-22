@@ -17,3 +17,7 @@ Meteor.startup ->
 		console.dir 'getAppearance ' + dogId
 		console.dir 'Found data: ' + DogAppearances.find({dogId: dogId}).count()
 		DogAppearances.find({dogId: dogId})
+
+	Meteor.publish 'getInsurance', (dogId) ->
+		console.dir 'getInsurance ' + dogId
+		DogInsurances.find({dogId: dogId})

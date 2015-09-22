@@ -36,3 +36,14 @@ Router.map ->
 		data: appearance: ->
 			DogAppearances.findOne({'dogId': Session.get('dogId')})
 
+	@route 'insurance',
+		template: 'insurance',
+		path: '/insurance/:name/:dogId'
+		onBeforeAction: ->
+			Session.set 'dogId', @params.dogId
+			this.next()
+		waitOn: ->
+			@subscribe 'getInsurance', @params.dogId
+		data: insurance : ->
+			DogInsurances.findOne({'dogId': Session.get('dogId')})
+
