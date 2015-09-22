@@ -12,35 +12,6 @@ Dogs.attachSchema(new SimpleSchema(
   dob:
     type: Date
     label: 'Född'
-  gender:
-    type: String
-    allowedValues: ['Hona', 'Hane']
-    label: 'Kön'
-    optional: true
-    autoform:
-      type: 'select-radio'
-  color:
-    type: String
-    label: 'Färg'
-    optional: true
-  tail:
-    type: String
-    label: 'Svans'
-    optional: true
-  isNutered:
-    label: 'Kastrerad'
-    type: String
-    allowedValues: ['Ja', 'Nej']
-    optional: true
-    autoform:
-      type: 'select-radio'
-  height:
-    type: Number
-    label: 'Höjd'
-    optional: true
-  weight:
-    type: Number
-    label: 'Vikt'
     optional: true
   comment:
     type: String
@@ -60,3 +31,14 @@ Dogs.attachSchema(new SimpleSchema(
     autoform:
       type: 'hidden'
 ))
+
+
+
+
+  # gender:
+  #   type: String
+  #   allowedValues: ['Hona', 'Hane']
+  #   label: 'Kön'
+  #   optional: true
+  #   autoform:
+  #     type: 'select-radio'

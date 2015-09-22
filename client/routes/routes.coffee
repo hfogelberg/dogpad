@@ -23,5 +23,16 @@ Router.map ->
 		waitOn: ->
 			@subscribe 'getIdentity', @params.dogId
 		data: identity: ->
-			DogIdentities.findOne()
-			#{'dogId': Session.get('dogId')})
+			DogIdentities.findOne({'dogId': Session.get('dogId')})
+
+	@route 'appearance',
+		template: 'appearance',
+		path: '/appearance/:name/:dogId'
+		onBeforeAction: ->
+			Session.set 'dogId', @params.dogId
+			this.next()
+		waitOn: ->
+			@subscribe 'getAppearance', @params.dogId
+		data: appearance: ->
+			DogAppearances.findOne({'dogId': Session.get('dogId')})
+

@@ -1,0 +1,15 @@
+<template name='appearance'>
+	{{#if appearance}}
+		{{#with appearance}}
+			<p>Färg: {{color}}</p>
+			<p>Päls: {{coat}}</p>
+			<p>Variant: {{variant}}</p>
+			<p>Tail: {{tail}}</p>
+			<p>Höjd: {{height}}</p>
+			<p>Vikt: {{weight}}</p>
+			<p>Comment: {{comment}}</p>
+		{{/with}}
+	{{else}}
+		{{>addAppearance}}
+	{{/if}}
+</template>
