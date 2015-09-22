@@ -1,0 +1,22 @@
+<template name='identity'>
+	{{#if identity}}
+		{{#with identity}}
+			<p>
+				Passport: {{passport}}
+			</p>
+			<p>
+				Chip: {{chip}}
+			</p>
+			<p>
+				Registration number: {{registration}}
+			</p>
+			<p>
+				Comment: {{comment}}
+			</p>
+			<br>
+			<button class="big ui green button"><a href='/editIdentity/{{_id}}'>Edit</a></button>
+		{{/with}}
+	{{else}}
+		{{> addIdentity}}
+	{{/if}}
+</template>
