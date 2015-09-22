@@ -1,0 +1,11 @@
+<head>
+  <title>Semantic Test</title>
+</head>
+
+<body>
+  <h1 class='ui header'>Meteor Semantic Test</h1>
+
+  <!-- {{>sidebarTest}} -->
+</body>
+
+

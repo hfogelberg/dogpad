@@ -1,0 +1,16 @@
+<template name='dogsAccordion'>
+	<div class="ui accordion">
+		{{#each myDogs}}
+			<div class="title"><i class="paw icon"></i>{{name}}</div>
+			<div class="content">
+				<div class='transition hidden'>
+					<p>Beskrivning</p>
+					<p>Id</p>
+					<p>Hälsa</p>
+					<p>Sport</p>
+					<p>Utställningar</p>
+				</div>
+			</div>
+		{{/each}}
+	</div>
+</template>

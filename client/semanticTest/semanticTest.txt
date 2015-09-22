@@ -1,0 +1,25 @@
+Template.menuTest.rendered = function(){
+  $('.ui.dropdown').dropdown();
+};
+
+
+Template.accordionTest.rendered = function(){
+	$('.accordion').accordion();
+};
+
+Template.sidebarTest.rendered = function(){
+	$('.context.example .ui.sidebar')
+	  .sidebar({
+	    context: $('.context.example .bottom.segment')
+	  })
+	  .sidebar('attach events', '.context.example .menu .item')
+	;
+};
+
+// Template.modalTest.events({
+//   "click .showModal": function (event) {
+//     // event.preventDefault();
+//     $('.ui.modal').modal('show');
+//     	// .modal('setting', 'transition', 'fade up')
+//   }
+// });

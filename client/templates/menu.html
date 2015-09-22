@@ -1,0 +1,34 @@
+<template name='menu'>
+	<div class="ui top attached menu">
+		<a class="item">
+	    <i class="sidebar icon"></i>
+	    Menu
+	  </a>
+	  <div class="ui dropdown icon item">
+	    <i class="wrench icon"></i>
+	    <div class="menu">
+	      <div class="item">
+	        <i class="dropdown icon"></i>
+	        <span class="text">New</span>
+	        <div class="menu">
+	          <div class="item"><a href='/newDog'>Dog</a></div>
+	          <div class="item">Image</div>
+	        </div>
+	      </div>
+	      <div class="item">Edit Permissions</div>
+	      <div class="divider"></div>
+	      <div class="header">
+	        Export
+	      </div>
+	      <div class="item">
+	        Share...
+	      </div>
+	    </div>
+	  </div>
+	  <div class="menu signIn">
+	    <div class="item">
+	      {{>loginButtons}}
+	    </div>
+	  </div>
+	</div>
+</template>
