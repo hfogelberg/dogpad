@@ -7,3 +7,5 @@ AutoForm.addHooks 'insertIdentityForm', dogIdHook
 AutoForm.addHooks 'insertAppearanceForm', dogIdHook
 
 AutoForm.addHooks 'insertInsuranceForm', dogIdHook
+
+AutoForm.addHooks 'insertVaccinationForm', dogIdHook

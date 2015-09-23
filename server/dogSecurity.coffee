@@ -29,3 +29,11 @@ DogInsurances.allow
 		true
 	update: ->
 		true
+
+Vaccinations.allow
+	insert: (doc) ->
+		true
+	remove: ->
+		true
+	update: ->
+		true

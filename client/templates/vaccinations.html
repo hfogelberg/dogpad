@@ -1,0 +1,21 @@
+<template name='vaccinations'>
+	<h2>Vaccinationer</h2>
+
+	<table class='table'>
+		<tbody>
+			{{#each vaccinations}}
+				<tr class='item'>
+					<td>{{vaccDate}}</td>
+					<td>{{vaccine}}</td>
+					<td>{{comment}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+
+	<p>
+		<button class='button addVaccinationBtn'>Add vaccination</button>
+	</p>
+
+	{{> addVaccination}}
+</template>

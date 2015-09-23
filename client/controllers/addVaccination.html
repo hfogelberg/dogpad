@@ -1,0 +1,22 @@
+<template name='addVaccination'>
+	<div class="ui modal vaccinationModal">
+	  <i class="close icon"></i>
+	  <div class="header">
+	    Ny vaccination
+	  </div>
+	  <div class="content">	
+			{{#autoForm collection='Vaccinations' id='insertVaccinationForm' type='insert'}}
+				<fieldset>
+					{{> afQuickField name='vaccDate'}}
+					{{> afQuickField name='vaccine'}}
+					{{> afQuickField name='amount'}}
+					{{> afQuickField name='contact'}}
+					{{> afQuickField name='cost'}}
+					{{> afQuickField name='reminderDate'}}
+					{{> afQuickField name='comment' rows='5' }}
+				</fieldset>
+				<button type='submit' class='btn btn-primary'>Spara</button>
+			{{/autoForm}}
+	  </div>
+	</div>
+</template>

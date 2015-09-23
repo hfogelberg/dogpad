@@ -21,3 +21,7 @@ Meteor.startup ->
 	Meteor.publish 'getInsurance', (dogId) ->
 		console.dir 'getInsurance ' + dogId
 		DogInsurances.find({dogId: dogId})
+
+	Meteor.publish 'getVaccinations', (dogId) ->
+		console.dir 'getVaccinations ' + dogId
+		Vaccinations.find({dogId: dogId})
