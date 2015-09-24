@@ -11,6 +11,9 @@
 			<p>Försäkringsnummer: {{insuranceNumber}}</p>
 			<p>Står i namn: {{policyTaker}}</p>
 			<p>Kommentar: {{comment}}</p>
+			<p>{{dogId}}</p>
+			<br>
+			<a href='/changeInsurance/{{dogId}}' class='ui button'>Change</a>
 		{{/with}}
 	{{else}}
 		{{>addInsurance}}

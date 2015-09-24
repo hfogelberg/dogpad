@@ -78,7 +78,18 @@ Router.map ->
 		waitOn: ->
 			@subscribe 'getInsurance', @params.dogId
 		data: insurance : ->
-			DogInsurances.findOne({'dogId': Session.get('dogId')})
+			DogInsurances.findOne()
+
+	@route 'changeInsurance',
+	template: 'changeInsurance',
+	path: 'changeInsurance/:dogId'
+	onBeforeAction: ->
+			Session.set 'dogId', @params.dogId
+			this.next()
+	waitOn: ->
+		@subscribe 'getInsurance', @params.dogId
+	data: insurance : ->
+		DogInsurances.findOne()
 
 	@route 'vaccinations',
 		template: 'vaccinations',

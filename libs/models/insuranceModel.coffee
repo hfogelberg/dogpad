@@ -38,17 +38,23 @@ DogInsurances.attachSchema(new SimpleSchema(
     label: 'Står i namn'
     optional: true
   comment:
-      type: String
-      label: 'Kommentar'
-      optional: true
+    type: String
+    label: 'Kommentar'
+    optional: true
+    autoform:
+      rows: 5
   createdAt:
-      type: Date
-      autoValue: ->
-        if this.isInsert
-          new Date()
+    type: Date
+    autoValue: ->
+      if this.isInsert
+        new Date()
+    autoform:
+      type: 'hidden'
   updatedAt:
     type: Date
     autoValue: -> new Date()
+    autoform:
+      type: 'hidden'
   dogId: 
     type: String
     autoform:

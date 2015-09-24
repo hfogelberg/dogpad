@@ -1,0 +1,6 @@
+<template name='changeInsurance'>
+	<h2>Change insurance</h2>
+	{{#with insurance}}
+		{{>quickForm collection='DogInsurances' id='changeInsuranceForm' type='update' doc=this}}
+	{{/with}}
+</template>
