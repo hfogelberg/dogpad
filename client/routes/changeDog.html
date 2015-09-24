@@ -1,0 +1,14 @@
+<template name='changeDog'>
+	{{#with dog}}
+		{{#autoForm collection='Dogs' id='changeDogForm' type='update' doc=this }}
+			<fieldset>
+				<legend>Ändra hund</legend>
+				{{> afQuickField name='name'}}
+				{{> afQuickField name='breed'}}
+				{{> afQuickField name='dob'}}
+				{{> afQuickField name='comment' rows=5}}
+			</fieldset>
+			<button type='submit' class='ui button'>Spara</button>
+		{{/autoForm}}
+	{{/with}}
+</template>

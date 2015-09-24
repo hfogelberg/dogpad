@@ -14,6 +14,15 @@ Router.map ->
 			console.log 'New Dog'
 			this.next()	
 
+	@route 'changeDog',
+		template: 'changeDog',
+		path: '/changeDog/:name/:dogId'
+		onBeforeAction: ->
+			Session.set 'dogId', @params.dogId
+			this.next()
+		data: dog: ->
+			Dogs.findOne({_id: Session.get('dogId')})
+
 	@route 'dog',
 		template: 'dog',
 		path: 'dog/:name/:dogId'

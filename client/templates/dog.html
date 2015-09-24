@@ -2,7 +2,9 @@
 	{{#with dog}}
 		<h2>{{name}}</h2>
 		<p>Ras: {{breed}}</p>
-		<p>Född: {{dob}}</p>
+		<p>Född: {{formatDate dob}}</p>
 		<p>Kommentar: {{comment}}</p>
+		<br>
+		<a href='/changeDog/{{name}}/{{_id}}' class='ui button'>Change</a>
 	{{/with}}
 </template>

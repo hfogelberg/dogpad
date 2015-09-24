@@ -1,11 +1,11 @@
 <template name='vaccinations'>
 	<h2>Vaccinationer</h2>
 
-	<table class='table'>
+	<table class='ui table'>
 		<tbody>
 			{{#each vaccinations}}
 				<tr class='item'>
-					<td>{{vaccDate}}</td>
+					<td>{{formatDate vaccDate}}</td>
 					<td>{{vaccine}}</td>
 					<td>{{comment}}</td>
 				</tr>
@@ -14,7 +14,7 @@
 	</table>
 
 	<p>
-		<button class='button addVaccinationBtn'>Add vaccination</button>
+		<button class='ui button addVaccinationBtn'>Add vaccination</button>
 	</p>
 
 	{{> addVaccination}}
