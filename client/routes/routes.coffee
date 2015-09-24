@@ -119,4 +119,12 @@ Router.map ->
 		data: contacts: ->
 			Contacts.find()
 
+	@route 'deworms',
+		template: 'deworms',
+		path: '/deworms/:name/:dogId'
+		onBeforeAction: ->
+			Session.set 'dogId', @params.dogId
+			this.next()
+		
+
 
