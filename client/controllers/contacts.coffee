@@ -1,8 +1,5 @@
-Template.menu.rendered = ->
-  $('.ui.dropdown').dropdown()
-
-Template.menu.events
+Template.contacts.events 
 	'click .newContactBtn': (event) ->
+		event.preventDefault
 		console.log 'newContactBtn clicked'
-		event.preventDefault()
 		$('.newContactModal').modal('show')

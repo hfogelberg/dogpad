@@ -1,0 +1,18 @@
+<template name='newContact'>
+	<div class='ui modal newContactModal'>
+	  <i class="close icon"></i>
+	  <div class="header">Ny kontakt</div>
+		<div class='content'>
+			{{#autoForm collection='Contacts' id='insertContactForm' type='insert'}}
+				<fieldset>
+					{{>afQuickField name='firstName'}}
+					{{>afQuickField name='lastName'}}
+					{{>afQuickField name='company'}}
+					{{>afQuickField name='phone'}}
+					{{>afQuickField name='email'}}
+				</fieldset>
+				<button type='submit' class='btn btn-primary'>Spara</button>
+			{{/autoForm}}
+		</div>
+	</div>
+</template>

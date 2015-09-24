@@ -37,3 +37,11 @@ Vaccinations.allow
 		true
 	update: ->
 		true
+
+Contacts.allow
+	insert: (userId, doc) ->
+		true
+	remove: ->
+		true
+	update: ->
+		true

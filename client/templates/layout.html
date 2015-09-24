@@ -7,23 +7,30 @@
   {{>menu}}
   <div class="ui bottom attached segment pushable">
     <div class="ui labeled icon left inline vertical sidebar menu uncover visible">
-      <a  href='/' class="item"><i class="home icon"></i>Home</a>
+      <a  href='/' class="item"><i class="home icon"></i>Hem</a>
       <a class="item">
         {{> dogsAccordion}}
       </a>
       <a class="item">
         <i class="smile icon"></i>
-        Friends
+        Vänner
+      </a>
+      <a class="item">
+        <i class="book icon"></i>
+          <a href='/contacts'>
+            Kontakter
+          </a>
       </a>
       <a class="item">
         <i class="calendar icon"></i>
-        Calender
+        Kalender
       </a>
     </div>
    <div class="pusher">
       <div class="ui basic segment">
         <div class='item'>
           {{>yield}}
+          {{>newContact}}
         </div>
       </div>
     </div>

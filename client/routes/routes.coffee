@@ -58,3 +58,12 @@ Router.map ->
 		data: vaccinations: ->
 			Vaccinations.find()
 
+	@route 'contacts',
+		template: 'contacts',
+		path: '/contacts'
+		waitOn: ->
+			@subscribe 'getContactsForUser', Session.get 'user'
+		data: contacts: ->
+			Contacts.find()
+
+

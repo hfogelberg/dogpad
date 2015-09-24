@@ -1,0 +1,15 @@
+<template name='contacts'>
+	<table>
+		<tbody>
+			{{#each contacts}}
+				<tr>
+					<td>{{firstName}}</td>
+					<td>{{lastName}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+
+	<br>
+	<a class='button newContactBtn'>New contact</a>
+</template>
