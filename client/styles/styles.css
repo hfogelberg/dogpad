@@ -1,7 +1,8 @@
 .pusher {
-	padding: 10 !important;
-	margin: 0 !important;
-	width: 400px;
+	background: red !important;
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+	display: inline-block;
 }
 
 .addVaccinationBtn {

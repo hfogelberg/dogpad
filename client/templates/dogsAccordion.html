@@ -1,7 +1,7 @@
 <template name='dogsAccordion'>
 	<div class="ui accordion">
 		{{#each myDogs}}
-			<div class="title"><i class="paw icon"></i><a href='/dog/{{name}}/{{_id}}'>{{name}}</a></div>
+			<div class="title"><a href='/dog/{{name}}/{{_id}}'>{{name}}</a></div>
 			<div class="content">
 				<div class='transition hidden'>
 					<p><a href='/appearance/{{name}}/{{_id}}'>Utseende</a></p>
