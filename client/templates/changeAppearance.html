@@ -1,0 +1,16 @@
+<template name='changeAppearance'>
+	{{#with appearance}}
+		{{#autoForm collection='DogAppearances' id='changeAppearanceForm' type='update' doc=this}}
+			<fieldset>
+				<legend>Utseende</legend>
+				{{> afQuickField name='color'}}
+				{{> afQuickField name='coat'}}
+				{{> afQuickField name='variant'}}
+				{{> afQuickField name='tail'}}
+				{{> afQuickField name='height'}}
+				{{> afQuickField name='weight'}}
+			</fieldset>
+			<button type='submit' class='btn btn-primary'>Spara</button>
+		{{/autoForm}}
+	{{/with}}
+</template>

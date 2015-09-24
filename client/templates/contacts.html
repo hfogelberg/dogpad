@@ -1,10 +1,13 @@
 <template name='contacts'>
-	<table>
+	<table class='ui unstackable table'>
 		<tbody>
 			{{#each contacts}}
 				<tr>
 					<td>{{firstName}}</td>
 					<td>{{lastName}}</td>
+					<td>{{company}}</td>
+					<td>{{phone}}</td>
+					<td>{{email}}</td>
 				</tr>
 			{{/each}}
 		</tbody>

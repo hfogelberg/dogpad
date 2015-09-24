@@ -20,6 +20,12 @@ Contacts.attachSchema(new SimpleSchema(
 		label: 'Epost'
 		type: String
 		regEx: SimpleSchema.RegEx.Email
+	website:
+		label: 'Web'
+		type: String
+	address:
+		label: 'Adress'
+		type: String
 	comment:
 		type: String
 		label: 'Kommentar'

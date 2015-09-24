@@ -2,7 +2,7 @@
 	<div class='ui modal newContactModal'>
 	  <i class="close icon"></i>
 	  <div class="header">Ny kontakt</div>
-		<div class='content'>
+		<div class='content formHorizonatal'>
 			{{#autoForm collection='Contacts' id='insertContactForm' type='insert'}}
 				<fieldset>
 					{{>afQuickField name='firstName'}}
@@ -10,6 +10,9 @@
 					{{>afQuickField name='company'}}
 					{{>afQuickField name='phone'}}
 					{{>afQuickField name='email'}}
+					{{>afQuickField name='website'}}
+					{{>afQuickField name='address' rows=5}}
+					{{>afQuickField name= 'comment' rows=5}}
 				</fieldset>
 				<button type='submit' class='btn btn-primary'>Spara</button>
 			{{/autoForm}}

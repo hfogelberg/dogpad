@@ -36,6 +36,17 @@ Router.map ->
 		data: identity: ->
 			DogIdentities.findOne({'dogId': Session.get('dogId')})
 
+	@route 'changeIdentity',
+		template: 'changeIdentity',
+		path: '/changeIdentity/:dogId'
+		onBeforeAction: ->
+			Session.set 'dogId', @params.dogId
+			this.next()
+		waitOn: ->
+			@subscribe 'getIdentity', @params.dogId
+		data: identity: ->
+			DogIdentities.findOne({dogId: Session.get('dogId')})
+
 	@route 'appearance',
 		template: 'appearance',
 		path: '/appearance/:name/:dogId'
@@ -45,7 +56,18 @@ Router.map ->
 		waitOn: ->
 			@subscribe 'getAppearance', @params.dogId
 		data: appearance: ->
-			DogAppearances.findOne({'dogId': Session.get('dogId')})
+			DogAppearances.findOne()
+
+	@route 'changeAppearance',
+		template: 'changeAppearance',
+		path: '/changeAppearance/:dogId'
+		onBeforeAction: ->
+			Session.set 'dogId', @params.dogId
+			this.next()
+		waitOn: ->
+			@subscribe 'getAppearance', @params.dogId
+		data: appearance: ->
+			DogAppearances.findOne()
 
 	@route 'insurance',
 		template: 'insurance',

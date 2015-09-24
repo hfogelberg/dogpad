@@ -1,0 +1,14 @@
+<template name='changeIdentity'>
+	{{#with identity}}
+		{{#autoForm collection='DogIdentities' id='changeIdentityForm' type='update' doc=this}}
+			<fieldset>
+				<legend>Ändra Id</legend>
+					{{> afQuickField name='registration'}}
+					{{> afQuickField name='chip'}}
+					{{> afQuickField name='passport'}}
+					{{> afQuickField name='comment' rows='5' }}
+			</fieldset>
+			<button type='submit' class='btn btn-primary'>Spara</button>
+		{{/autoForm}}
+	{{/with}}
+</template>
